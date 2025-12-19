@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:Store_Book"
         mc:Ignorable="d" Height="650" Width="500"
         WindowStartupLocation="CenterOwner" Icon="/icon.png"
-        ResizeMode="NoResize" Background="#FF272727" FontFamily="Times New Roman">
+        ResizeMode="NoResize" Background="{StaticResource PrimaryBrush}" 
+        FontFamily="Times New Roman">
 
     <Grid Margin="15">
         <Grid.RowDefinitions>
@@ -39,20 +40,20 @@
 
                 <!-- Артикул -->
                 <StackPanel Orientation="Vertical" Margin="0,0,0,15">
-                    <TextBlock Text="Артикул:" FontWeight="SemiBold" Margin="0,0,0,5" Foreground="#FFE8E8E8" FontSize="16" HorizontalAlignment="Left"/>
+                    <TextBlock Text="Артикул:" Margin="0,0,0,5" Foreground="#FFE8E8E8" FontSize="16" HorizontalAlignment="Left"/>
                     <TextBox x:Name="TextBoxArticle" Height="30" Padding="5"
                          ToolTip="Уникальный артикул товара" FontSize="16" HorizontalAlignment="Left" VerticalContentAlignment="Center" Width="420" Background="#FFD8D8D8" BorderBrush="#FF3C3C3C"/>
                 </StackPanel>
 
                 <!-- Наименование -->
                 <StackPanel Orientation="Vertical" Margin="0,0,0,15">
-                    <TextBlock Text="Наименование товара:" FontWeight="SemiBold" Margin="0,0,0,5" Foreground="#FFE8E8E8" FontSize="16" HorizontalAlignment="Left"/>
+                    <TextBlock Text="Наименование товара:" Margin="0,0,0,5" Foreground="#FFE8E8E8" FontSize="16" HorizontalAlignment="Left"/>
                     <TextBox x:Name="TextBoxName" Height="30" Padding="5" FontSize="16" Width="420" HorizontalAlignment="Left" VerticalContentAlignment="Center" Background="#FFD8D8D8" BorderBrush="#FF3C3C3C"/>
                 </StackPanel>
 
                 <!-- Категория -->
                 <StackPanel Orientation="Vertical" Margin="0,0,0,15">
-                    <TextBlock Text="Категория:" FontWeight="SemiBold" Margin="0,0,0,5" Foreground="#FFE8E8E8" FontSize="16" HorizontalAlignment="Left"/>
+                    <TextBlock Text="Категория:" Margin="0,0,0,5" Foreground="#FFE8E8E8" FontSize="16" HorizontalAlignment="Left"/>
                     <ComboBox x:Name="ComboBoxCategory" Height="30" Width="420" HorizontalAlignment="Left" VerticalContentAlignment="Center" BorderBrush="#FF3C3C3C" FontSize="16">
                         <ComboBox.Background>
                             <LinearGradientBrush EndPoint="0,1">
@@ -65,7 +66,7 @@
 
                 <!-- Описание -->
                 <StackPanel Orientation="Vertical" Margin="0,0,0,15">
-                    <TextBlock Text="Описание товара:" FontWeight="SemiBold" Margin="0,0,0,5" Foreground="#FFE8E8E8" HorizontalAlignment="Left" FontSize="14"/>
+                    <TextBlock Text="Описание товара:" Margin="0,0,0,5" Foreground="#FFE8E8E8" HorizontalAlignment="Left" FontSize="14"/>
                     <TextBox x:Name="TextBoxDescription" Height="60" Padding="5" 
                          TextWrapping="Wrap" AcceptsReturn="True"
                          VerticalScrollBarVisibility="Auto" FontSize="16" Width="420" HorizontalAlignment="Left" Background="#FFD8D8D8" BorderBrush="#FF3C3C3C"/>
@@ -73,33 +74,33 @@
 
                 <!-- Производитель -->
                 <StackPanel Orientation="Vertical" Margin="0,0,0,15">
-                    <TextBlock Text="Производитель:" FontWeight="SemiBold" Margin="0,0,0,5" Foreground="#FFE8E8E8" FontSize="16" HorizontalAlignment="Left"/>
+                    <TextBlock Text="Производитель:" Margin="0,0,0,5" Foreground="#FFE8E8E8" FontSize="16" HorizontalAlignment="Left"/>
                     <ComboBox x:Name="ComboBoxProducer" Height="30" FontSize="16" Width="420" HorizontalAlignment="Left" VerticalContentAlignment="Center" BorderBrush="#FF3C3C3C" Background="#FFD8D8D8"/>
                 </StackPanel>
 
                 <!-- Поставщик -->
                 <StackPanel Orientation="Vertical" Margin="0,0,0,15">
-                    <TextBlock Text="Поставщик:" FontWeight="SemiBold" Margin="0,0,0,5" Foreground="#FFE8E8E8" FontSize="16" HorizontalAlignment="Left"/>
+                    <TextBlock Text="Поставщик:" Margin="0,0,0,5" Foreground="#FFE8E8E8" FontSize="16" HorizontalAlignment="Left"/>
                     <TextBox x:Name="TextBoxSupplier" Height="30" Padding="5" FontSize="14" Width="420" HorizontalAlignment="Left" VerticalContentAlignment="Center" Background="#FFD8D8D8" BorderBrush="#FF3C3C3C"/>
                 </StackPanel>
 
                 <!-- Цена -->
                 <StackPanel Orientation="Vertical" Margin="0,0,0,15">
-                    <TextBlock Text="Цена:" FontWeight="SemiBold" Margin="0,0,0,5" Foreground="#FFE8E8E8" FontSize="16" HorizontalAlignment="Left"/>
+                    <TextBlock Text="Цена:" Margin="0,0,0,5" Foreground="#FFE8E8E8" FontSize="16" HorizontalAlignment="Left"/>
                     <TextBox x:Name="TextBoxPrice" Height="30" Padding="5"
                          ToolTip="Цена должна быть положительной" FontSize="16" HorizontalAlignment="Left" Width="420" VerticalContentAlignment="Center" Background="#FFD8D8D8" BorderBrush="#FF3C3C3C"/>
                 </StackPanel>
 
                 <!-- Единица измерения -->
                 <StackPanel Orientation="Vertical" Margin="0,0,0,15">
-                    <TextBlock Text="Единица измерения:" FontWeight="SemiBold" Margin="0,0,0,5" Foreground="#FFE8E8E8" FontSize="16" HorizontalAlignment="Left"/>
+                    <TextBlock Text="Единица измерения:" Margin="0,0,0,5" Foreground="#FFE8E8E8" FontSize="16" HorizontalAlignment="Left"/>
                     <TextBox x:Name="TextBoxUnit" Height="30" Padding="5,5,5,5" 
                          Text="шт." Width="420" HorizontalAlignment="Left" VerticalContentAlignment="Center" Background="#FFD8D8D8" BorderBrush="#FF3C3C3C" FontSize="16"/>
                 </StackPanel>
 
                 <!-- Количество на складе -->
                 <StackPanel Orientation="Vertical" Margin="0,0,0,15">
-                    <TextBlock Text="Количество на складе:" FontWeight="SemiBold" Margin="0,0,0,5" Foreground="#FFE8E8E8" FontSize="16" HorizontalAlignment="Left"/>
+                    <TextBlock Text="Количество на складе:" Margin="0,0,0,5" Foreground="#FFE8E8E8" FontSize="16" HorizontalAlignment="Left"/>
                     <TextBox x:Name="TextBoxQuantity" Height="30" Padding="5,7,5,5" 
                          Text="0"
                          ToolTip="Количество не может быть отрицательным" FontSize="16" Width="420" HorizontalAlignment="Left" VerticalContentAlignment="Center" Background="#FFD8D8D8" BorderBrush="#FF3C3C3C"/>
@@ -107,7 +108,7 @@
 
                 <!-- Скидка -->
                 <StackPanel Orientation="Vertical" Margin="0,0,0,15">
-                    <TextBlock Text="Действующая скидка (%):" FontWeight="SemiBold" Margin="0,0,0,5" Foreground="#FFE8E8E8" FontSize="16"/>
+                    <TextBlock Text="Действующая скидка (%):" Margin="0,0,0,5" Foreground="#FFE8E8E8" FontSize="16"/>
                     <TextBox x:Name="TextBoxDiscount" Height="30" Padding="5" 
                          Text="0"
                          ToolTip="Скидка в процентах (0-100)" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="420" Background="#FFD8D8D8" BorderBrush="#FF3C3C3C"/>
@@ -118,14 +119,11 @@
         <!-- Кнопки -->
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
             <Button x:Name="ButtonCancel" Content="Отмена" Click="ButtonCancel_Click"
-                    Width="90" Height="35" Margin="0,0,10,0"
-                    Background="#FF6D6D6D" Foreground="#FFE8E8E8" FontSize="14" BorderBrush="#FF3C3C3C"/>
+                    Style="{StaticResource CancelButtonStyle}" Margin="0,0,10,0"/>
             <Button x:Name="ButtonDelete" Content="Удалить" Click="DeleteButton_Click"
-                    Width="90" Height="35" Margin="0,0,10,0" BorderBrush="#FF3C3C3C"
-                    Background="#FF902C2C" Foreground="#FFE8E8E8" FontSize="14"/>
+                    Style="{StaticResource DeleteButtonStyle}" Margin="0,0,10,0"/>
             <Button x:Name="ButtonSave" Content="Сохранить" Click="ButtonSave_Click"
-                    Width="90" Height="35"
-                    Background="#FF4A902C" Foreground="#FFE8E8E8" FontSize="14" BorderBrush="#FF3C3C3C"/>
+                    Style="{StaticResource SaveButtonStyle}"/>
         </StackPanel>
     </Grid>
 </Window>
